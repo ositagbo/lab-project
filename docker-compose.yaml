@@ -1,0 +1,12 @@
+version: '1'
+
+services:
+  codex-springboot-container:
+    image: codex-spring-boot-docker-compose:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/codex-springboot-container
+    ports:
+      - "8080-8100:8080"
